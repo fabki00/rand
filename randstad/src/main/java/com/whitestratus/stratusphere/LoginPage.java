@@ -1,18 +1,18 @@
 package com.whitestratus.stratusphere;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+//import static org.junit.Assert.assertEquals;
+//import static org.junit.Assert.assertTrue;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+//import org.junit.After;
+//import org.junit.Before;
+//import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Wait;
+//import org.openqa.selenium.firefox.FirefoxDriver;
+//import org.openqa.selenium.support.ui.ExpectedConditions;
+//import org.openqa.selenium.support.ui.FluentWait;
+//import org.openqa.selenium.support.ui.Wait;
 
 
 public class LoginPage extends PageBase {
@@ -51,14 +51,16 @@ public class LoginPage extends PageBase {
 		driver.get(url);
 	}
 	
-	public LoginPage enterEmail(String email) {
+	// public LoginPage enterEmail(String email) 
+	public void enterEmail(String email){
 		driver.findElement(emailLocator).sendKeys(email);
-		return this;
+	//	return this;
 	}	
 	
-	public LoginPage enterPassword(String password) {
+//	public LoginPage enterPassword(String password) 
+	public void enterPassword(String password){
 		driver.findElement(passwordLocator).sendKeys(password);
-		return this;
+	//	return this;
 	}
 	
 	public void unckeckStaySignedIn() {

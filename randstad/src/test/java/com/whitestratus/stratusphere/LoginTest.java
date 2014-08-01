@@ -11,9 +11,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
-
-
-
 public class LoginTest {
 	static WebDriver driver;
 	final private String PROTOCOL = "https";
@@ -45,7 +42,7 @@ public class LoginTest {
 		
 		WebElement emailId = driver.findElement(By.id("Email"));
 		emailId.sendKeys(invalidUserid);
-		WebElement pass 	= driver.findElement(By.id("Passwd"));
+		WebElement pass = driver.findElement(By.id("Passwd"));
 		pass.sendKeys(invalidUserIdPassword);
 		WebElement staySignedIn = driver.findElement(By.id("PersistentCookie"));
 		if  ( staySignedIn.isSelected() )  {
@@ -78,6 +75,11 @@ public class LoginTest {
 		signIn.click();
 		
 	//	WebDriverWait wait = new WebDriverWait(driver, 4);
+		
+		//TODO after successful login we are brought to Google accounts page where we need to 
+		//  give permission for the application to access our Google account (by clicking Allow)
+		
+		
 		
 		assertTrue("Logged in", driver.getTitle().startsWith("WS Search App"));
 		

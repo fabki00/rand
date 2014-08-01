@@ -1,6 +1,7 @@
-package com.whitestratus.stratusphere;
+package com.whitestratus.scmt;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -22,7 +23,7 @@ public class PageBase {
 	}
 	
 	public void open() {
-		//TODO
+		driver.get(Url);
 	}
 	
 	public String getTitle() {		
@@ -40,16 +41,17 @@ public class PageBase {
 		return el;	
 	}
 	
-	public boolean isElementPresent(By id) {
-		boolean present = false;
-		//TODO
-		return present;		
+	public boolean isElementPresent(By by) {
+		try {
+			driver.findElement(by);
+			return true;
+		} catch (NoSuchElementException e) {
+			return false;			
+		}		
 	}
 	
 	public boolean isTextPresent(String txt) {
-		boolean present = false;
-		//TODO
-		return present;
+		return driver.getPageSource().contains(txt);
 	}
 
 }

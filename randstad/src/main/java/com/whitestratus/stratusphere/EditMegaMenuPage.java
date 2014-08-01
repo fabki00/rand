@@ -22,12 +22,12 @@ import static  org.junit.Assert.*;
 // check if LoadableComponent is really necessary here (maybe it's only needed for Ajax pages ) 
 
 // public class EditMegaMenuPage extends LoadableComponent<EditMegaMenuPage>{
+//public class EditMegaMenu extends PageBase {
 public class EditMegaMenuPage {
 	
 	WebDriver driver;
 	String baseURL = "https://ws-am-runtime.appspot.com/sitecontentmanagement_prototype_dev";
-	MenuHeader  menu;
-	
+	MenuHeader  menu;	
 	
 	public enum Site {
 		AUSTRALIA(1), CHINA(2), MALAYSIA(3), NEW_ZEALAND(4), SINGAPORE(5);
